@@ -72,7 +72,7 @@
     NSString *queueName = [args objectForKey:@"queueName"];
     NSString *message = [args objectForKey:@"message"];
 
-    [self.wormhole passMessageObject:@{@"selectionString" : message} identifier:queueName];
+    [self.wormhole passMessageObject: message identifier:queueName];
 
     [self.commandDelegate sendPluginResult:[CDVPluginResult resultWithStatus:CDVCommandStatus_OK] callbackId:command.callbackId];
 }
